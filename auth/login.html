@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Lagos Book: Login</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="items-center justify-center w-full p-8 md:w-6/12 lg:w-4/12  mx-auto mt-15 rounded-lg p-8">
+        <img src="/assets/images/LagosBook-logo.webp" alt="Lagos Book Logo" class="w-42 mx-auto">
+        <br>
+        <h2 class="text-xl font-bold text-center">Sign In</h2>
+        <br>
+        <form id="loginForm" action="/auth/login" method="POST">
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                <input type="email" id="email" name="email" required
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                <input type="password" id="password" name="password"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="flex items-center justify-between">
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Sign In
+                </button>
+
+                <a href="/auth/forgot-password.html"
+                    class="inline-block align-baseline text-sm text-blue-500 hover:text-blue-800">
+                    Forgot Password?
+                </a>
+            </div>
+        </form>
+        <br>
+        <a href="/auth/register.html" class="inline-block align-baseline text-sm text-blue-500 hover:text-blue-800">
+            Don't have an account? Sign up
+        </a>
+    </div>
+</body>
+
+</html>
